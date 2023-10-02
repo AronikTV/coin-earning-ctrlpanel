@@ -1,5 +1,8 @@
 # CtrlPanel.GG Coin Earning System
 
+Disclaimer: This Repository is Not Officially Associated with CtrlPanel
+
+Please be aware that this repository is not officially affiliated with CtrlPanel. You are using this code at your own risk, and we assume no responsibility for any potential damages that may occur while using CtrlPanel or this Addon.
 
 ## About
 
