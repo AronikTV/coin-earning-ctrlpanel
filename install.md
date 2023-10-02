@@ -11,7 +11,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 3. Clone the repository by running the following command:
 
    ```shell
-   git clone https://github.com/yourusername/ctrlpanel-gg-coin-earning-system.git```
+   git clone https://github.com/aroniktv/ctrlpanel-gg-coin-earning-system.git
    
 ## Step 2: Configure the Variables (Linkvertise)
 
@@ -63,7 +63,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
                                                      
    Route::get(‘/earn/adpage’, [EarnController::class, ‘timerPage’])->name(‘earn.adpage’);
    Route::get(‘/earn/return’, [EarnController::class, ‘redirectToEarnIndex’])->name(‘earn.return’);
-    Route::get(‘/redeem’, [EarnController::class, ‘redeem’])->name(‘earn.redeem’);```
+    Route::get(‘/redeem’, [EarnController::class, ‘redeem’])->name(‘earn.redeem’);
  
 3. Save the File.
  
