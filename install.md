@@ -66,6 +66,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
    Route::get('/earn', [EarnController::class, 'index'])->name('earn.index');
    Route::get('/earn/lv', [EarnController::class, 'start'])->name('earn.start');
    Route::get('/earn/ad', [EarnController::class, 'adsense'])->name('earn.adsense');
+   Route::view('/adblocker-found', 'adblocker_found')->name('adblocker_found');
 
    Route::get('/earn/adpage', [EarnController::class, 'timerPage'])->name('earn.adpage');
    Route::get('/earn/return', [EarnController::class, 'redirectToEarnIndex'])->name('earn.return');
