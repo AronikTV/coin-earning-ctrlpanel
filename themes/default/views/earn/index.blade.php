@@ -10,8 +10,7 @@
                             @method('PATCH')
                                                 <div class="row">
                                                     <div class="col d-flex justify-content-end">
-                                                        <button class="btn btn-inverse-success"
-                                                                type="submit">{{ __('Save Changes') }}</button>
+                                                        <button class="btn btn-primary btn-inverse-success" type="submit">{{ __('Save Changes') }}</button>
                                                     </div>
                                                 </div>
                         </form>
