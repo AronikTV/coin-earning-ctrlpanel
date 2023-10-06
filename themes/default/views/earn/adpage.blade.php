@@ -89,10 +89,38 @@
 </form>
 @endif
 @if($remainingTime !== 0)
-    <button class="btn btn-primary btn-lg"
+    <button id="refreshButton" class="btn btn-lg"
             onclick="refreshPage()">{{ __('Refresh Timer') }}</button>
 </div>
 @endif
+
+<script>
+    // Function to disable the button and make it gray (Spam protection)
+    function disableButton() {
+        var button = document.getElementById('refreshButton');
+        button.disabled = true;
+        button.style.backgroundColor = 'gray';
+    }
+
+    // Function to enable the button and make it blue
+    function enableButton() {
+        var button = document.getElementById('refreshButton');
+        button.disabled = false;
+        button.style.backgroundColor = 'blue';
+    }
+
+    // Random time delay between 0.3 and 1.1 seconds
+    var randomDelay = Math.floor(Math.random() * (1100 - 300 + 1)) + 300;
+
+    // Disable the button initially
+    disableButton();
+
+    // Set a timeout to enable the button after the random delay
+    setTimeout(function () {
+        enableButton();
+    }, randomDelay);
+</script>
+
 </div>
 
 
