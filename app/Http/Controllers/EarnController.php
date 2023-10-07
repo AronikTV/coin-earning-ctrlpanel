@@ -116,4 +116,37 @@ class EarnController extends Controller
 
         return redirect()->route('earn.index')->with('success', __("You successfully got Coins!"))->withoutCookie('earn_code');
     }
+
+    public function clickcoin(Request $request)
+        {
+            $clickcoinReward = 1; // Define the reward amount here
+
+            $lastClickTime = $request->session()->get('clickcoin_last_click', null);
+            $minTimeBetweenClicks = 60; // Minimum time between clicks in seconds (adjust as needed)
+
+            if ($lastClickTime !== null && now()->diffInSeconds($lastClickTime) < $minTimeBetweenClicks) {
+            // Spam protection: User clicked too quickly, show an error message or redirect them back.
+               return redirect()->route('earn.index')->with('error', 'Please wait 60seconds before clicking again.');
+            }
+
+            // Redirect the user to the specified link
+            $clickcoinLink = 'your direct ad link';
+
+            // Check if the redirection is successful
+            $response = Http::get($clickcoinLink);
+
+            if ($response->status() === 200) {
+            // Award the reward to the user
+            $user = Auth::user();
+            $user->increment('credits', $clickcoinReward);
+
+            // Set the current time as the last click time
+            $request->session()->put('clickcoin_last_click', now());
+
+              return redirect()->away($clickcoinLink)->with('success', 'You earned ' . $clickcoinReward . ' coins!');
+            } else {
+        // If the redirection was not successful, show an error message or handle it accordingly.
+        return redirect()->route('earn.index')->with('error', 'Failed to redirect to Clickcoin link.');
+        }
+    }
 }
