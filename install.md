@@ -45,13 +45,13 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 
 1. Open up the EarnController.php which can be found in /app/Http/Controllers.
 
-2. Replace $clickcoinLink = 'your direct ad link'; with your ads direct link.
+2. Change the Variable `$clickcoinReward` to the Amount of Coins you want to give a user for an click. The default is 1. `$clickcoinReward = 1`
 
-4. Change the Variable `$clickcoinReward` to the Amount of Coins you want to give a user for an click. The default is 1. `$clickcoinReward = 1`
+3. Change the Variable `$minTimeBetweenClicks` to the Amount of want user to wait after each Click. The default is 60. `$minTimeBetweenClicks = 60`
 
-5. Change the Variable `$minTimeBetweenClicks` to the Amount of want user to wait after each Click. The default is 60. `$minTimeBetweenClicks = 60`
+4. Replace $clickcoinLink = 'your direct ad link'; with your ads direct link.
 
-6. Save the File.
+5. Save the File.
 
 ## Step 5: Configure the Domains
 
