@@ -117,7 +117,7 @@
                                    <td>Clickcoin</td>
                                    <td><span class="badge bg-light text-dark">1 Coins</span></td> <!-- Replace X with the actual reward amount -->
                                    <td><span class="badge bg-success">Available</span></td>
-                                   <td><a href="{{ url('earn/clickcoin') }}">
+                                   <td><a href="{{ url('earn/clickcoin') }}" target="_blank">
                                        <button class="btn btn-primary px-2 py-1">Start</button>
                                      </a></td>
                                 </tr>
