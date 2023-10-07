@@ -41,7 +41,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 
 6. Save the File.
 
-## Step 2: Configure the Variables (ClickCoins)
+## Step 4: Configure the Variables (ClickCoins)
 
 1. Open up the EarnController.php which can be found in /app/Http/Controllers.
 
