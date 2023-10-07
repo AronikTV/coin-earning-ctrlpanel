@@ -119,35 +119,36 @@ class EarnController extends Controller
     }
 
     public function clickcoin(Request $request)
-        {
-            $clickcoinReward = 1; // Define the reward amount here
+{
+    $clickcoinReward = 1; // Define the reward amount here
 
-            $lastClickTime = $request->session()->get('clickcoin_last_click', null);
-            $minTimeBetweenClicks = 60; // Minimum time between clicks in seconds (adjust as needed)
+    $lastClickTime = $request->session()->get('clickcoin_last_click', null);
+    $minTimeBetweenClicks = 60; // Minimum time between clicks in seconds (adjust as needed)
 
-            if ($lastClickTime !== null && now()->diffInSeconds($lastClickTime) < $minTimeBetweenClicks) {
-            // Spam protection: User clicked too quickly, show an error message or redirect them back.
-               return redirect()->route('earn.index')->with('error', 'Please wait 60seconds before clicking again.');
-            }
+    // Update the last click time immediately to prevent multiple clicks
+    $request->session()->put('clickcoin_last_click', now());
 
-            // Redirect the user to the specified link
-            $clickcoinLink = 'your direct ad link';
+    if ($lastClickTime !== null && now()->diffInSeconds($lastClickTime) < $minTimeBetweenClicks) {
+        // Spam protection: User clicked too quickly, show an error message or redirect them back.
+        return redirect()->route('earn.index')->with('error', 'Please wait 60 seconds before clicking again.');
+    }
 
-            // Check if the redirection is successful
-            $response = Http::get($clickcoinLink);
+    // Redirect the user to the specified link
+    $clickcoinLink = 'https://ripewhining.com/tbjr99yhdt?key=67cdcfd4957b7a5f9204719d202b4048';
 
-            if ($response->status() === 200) {
-            // Award the reward to the user
-            $user = Auth::user();
-            $user->increment('credits', $clickcoinReward);
+    // Check if the redirection is successful
+    $response = Http::get($clickcoinLink);
 
-            // Set the current time as the last click time
-            $request->session()->put('clickcoin_last_click', now());
+    if ($response->status() === 200) {
+        // Award the reward to the user
+        $user = Auth::user();
+        $user->increment('credits', $clickcoinReward);
 
-              return redirect()->away($clickcoinLink)->with('success', 'You earned ' . $clickcoinReward . ' coins!');
-            } else {
+        return redirect()->away($clickcoinLink)->with('success', 'You earned ' . $clickcoinReward . ' coins!');
+    } else {
         // If the redirection was not successful, show an error message or handle it accordingly.
         return redirect()->route('earn.index')->with('error', 'Failed to redirect to Clickcoin link.');
-        }
     }
+}
+
 }
