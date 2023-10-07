@@ -41,7 +41,19 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 
 6. Save the File.
 
-## Step 4: Configure the Domains
+## Step 4: Configure the Variables (ClickCoins)
+
+1. Open up the EarnController.php which can be found in /app/Http/Controllers.
+
+2. Change the Variable `$clickcoinReward` to the Amount of Coins you want to give a user for an click. The default is 1. `$clickcoinReward = 1`
+
+3. Change the Variable `$minTimeBetweenClicks` to the Amount you want user to wait after each Click. The default is 60. `$minTimeBetweenClicks = 60`
+
+4. Replace $clickcoinLink = 'your direct ad link'; with your ads direct link.
+
+5. Save the File.
+
+## Step 5: Configure the Domains
 
 1. Open up the earn.blade.php which can be found in /resources/views/.
 
@@ -49,7 +61,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 
 3. Save the File.
 
-## Step 5: Add the Routings and the Navigation and do the last steps.
+## Step 6: Add the Routings and the Navigation and do the last steps.
 
 1. Open up the web.php file which can be found in /routes/. (This is in your CtrlPanel Installation)
 
@@ -66,6 +78,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
    Route::get('/earn', [EarnController::class, 'index'])->name('earn.index');
    Route::get('/earn/lv', [EarnController::class, 'start'])->name('earn.start');
    Route::get('/earn/ad', [EarnController::class, 'adsense'])->name('earn.adsense');
+   Route::get('/earn/clickcoin', [EarnController::class, 'clickcoin'])->name('earn.clickcoin');
    Route::view('/adblocker-found', 'adblocker_found')->name('adblocker_found');
 
    Route::get('/earn/adpage', [EarnController::class, 'timerPage'])->name('earn.adpage');
