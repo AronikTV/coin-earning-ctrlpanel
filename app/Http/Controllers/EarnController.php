@@ -134,7 +134,7 @@ class EarnController extends Controller
     }
 
     // Redirect the user to the specified link
-    $clickcoinLink = 'https://ripewhining.com/tbjr99yhdt?key=67cdcfd4957b7a5f9204719d202b4048';
+    $clickcoinLink = 'your direct ad link';
 
     // Check if the redirection is successful
     $response = Http::get($clickcoinLink);
