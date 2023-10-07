@@ -47,7 +47,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 
 2. Change the Variable `$clickcoinReward` to the Amount of Coins you want to give a user for an click. The default is 1. `$clickcoinReward = 1`
 
-3. Change the Variable `$minTimeBetweenClicks` to the Amount of want user to wait after each Click. The default is 60. `$minTimeBetweenClicks = 60`
+3. Change the Variable `$minTimeBetweenClicks` to the Amount you want user to wait after each Click. The default is 60. `$minTimeBetweenClicks = 60`
 
 4. Replace $clickcoinLink = 'your direct ad link'; with your ads direct link.
 
