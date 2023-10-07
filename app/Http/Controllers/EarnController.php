@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Spatie\Activitylog\Models\Activity;
 use App\Models\User;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Http;
 
 
 class EarnController extends Controller
