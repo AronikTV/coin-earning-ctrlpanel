@@ -11,7 +11,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 3. Clone the repository by running the following command:
 
    ```shell
-   git clone https://github.com/AronikTV/coin-earning-ctrlpanel.git
+   git clone https://github.com/ismamilahi/coin-earning-ctrlpanel.git
 
    ```
 
@@ -19,13 +19,17 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 
 1. Open up the EarnController.php which can be found in /app/Http/Controllers.
 
-2. Replace `https://my.domain.example` by the Domain of your CtrlPanel. !!!Do NOT ADD A / !!!
+2. Change `$dailyLimit` to the amount of daily how much link generate per user.
 
-3. Replace `yourid` with your Linkvertise Publisher ID which you can find in the Full Script API Section.
+3. Change `$timezone` to what your timezone, you can find your timezone from https://en.wikipedia.org/wiki/Time_zone
 
-4. Change the Variable `$reward` to the Amount of Coins you want to give a user for an ads session. The default is 30. `($reward = 30;)`
+4. Replace `https://my.domain.example` by the Domain of your CtrlPanel. !!!Do NOT ADD A / !!!
 
-5. Save the File.
+5. Replace `yourid` with your Linkvertise Publisher ID which you can find in the Full Script API Section.
+
+6. Change the Variable `$reward` to the Amount of Coins you want to give a user for an ads session. The default is 30. `($reward = 30;)`
+
+7. Save the File.
 
 ## Step 3: Configure the Variables (Google Adsense)
 

@@ -85,6 +85,7 @@
                                 <tr>
                                     <th>{{__('Type')}}</th>
                                     <th>{{__('Reward')}}</th>
+                                    <th>{{__('Daily Limit')}}</th>
                                     <th>{{__('Status')}}</th>
                                     <th>{{__('Action')}}</th>
                                 </tr>
@@ -94,6 +95,7 @@
                                 <tr>
                                     <td>Linkvertise</td>
                                     <td><span class="badge bg-light text-dark">30 Coins</span></td>
+                                    <td><span class="badge bg-light text-dark">5 Link Per Day</span></td>
                                     <td><span class="badge bg-success">Available</span></td>
                                     <td><a href="{{ url('earn/lv') }}">
                                         <Button class="btn btn-primary px-4 py-2">Start</Button>
@@ -105,6 +107,7 @@
                                 <tr>
                                     <td>Adsense</td>
                                     <td><span class="badge bg-light text-dark">5 Coins</span></td>
+                                    <td><span class="badge bg-light text-dark">Unlimited</span></td>
                                     <td><span class="badge bg-success">Available</span></td>
                                     <td><a href="{{ url('earn/ad') }}">
                                         <Button class="btn btn-primary px-4 py-2">Start</Button>
@@ -116,6 +119,7 @@
                                 <tr>
                                    <td>Clickcoin</td>
                                    <td><span class="badge bg-light text-dark">1 Coins</span></td> <!-- Replace X with the actual reward amount -->
+                                   <td><span class="badge bg-light text-dark">Unlimited</span></td>
                                    <td><span class="badge bg-success">Available</span></td>
                                    <td><a href="{{ url('earn/clickcoin') }}" target="_blank">
                                        <button class="btn btn-primary px-2 py-1">Start</button>
