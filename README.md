@@ -36,6 +36,6 @@ For detailed installation instructions, please refer to the [Installation Guide]
 
 ## Credits
 
-This project is developed and maintained by AronikTV, LogischJoJo, igot2phones and Lishan778
+This project is developed and maintained by AronikTV, LogischJoJo, igot2phones, Lishan778 and Ismam Ilahi
 
 Feel free to contribute, report issues, or suggest improvements!
