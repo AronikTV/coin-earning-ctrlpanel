@@ -95,7 +95,7 @@
                                 <tr>
                                     <td>Linkvertise</td>
                                     <td><span class="badge bg-light text-dark">30 Coins</span></td>
-                                    <td><span class="badge bg-light text-dark">5 Link Per Day</span></td>
+                                    <td><span class="badge bg-light text-dark">{{ Session::get("linkvertise_count_" . Auth::id(), 0) . "/" . app('App\Http\Controllers\EarnController')->getDailyLimit() }} Complete</span></td>
                                     <td><span class="badge bg-success">Available</span></td>
                                     <td><a href="{{ url('earn/lv') }}">
                                         <Button class="btn btn-primary px-4 py-2">Start</Button>
