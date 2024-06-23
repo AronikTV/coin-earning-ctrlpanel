@@ -14,6 +14,11 @@ class EarnController extends Controller
     private $minTimeBetweenEarnings = 10; // Minimum time between earnings in seconds (adjust as needed)
     private $timezone = 'Asia/Dhaka'; //you can find from your time zone here - https://en.wikipedia.org/wiki/Time_zone
 
+    public function getDailyLimit()
+    {
+        return $this->dailyLimit;
+    }
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -59,7 +64,7 @@ class EarnController extends Controller
         Session::put("earn_ip_$userId", $request->ip());
 
         // Construct Linkvertise URL using $code
-        $base = "https://link-to.net/Publisher_ID";
+        $base = "https://link-to.net/" . 'Your_Publisher_ID';
         $base .= "/" . rand(100, 1000) . "." . rand(999, 10000000) . "/dynamic/?r=";
         $base .= base64_encode(env('APP_URL', 'Your_CtrlPanel_Domain') . '/redeem?code=' . Session::get("current_earn_code_$userId"));
 
