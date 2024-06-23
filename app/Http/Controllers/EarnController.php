@@ -14,6 +14,11 @@ class EarnController extends Controller
     private $minTimeBetweenEarnings = 10; // Minimum time between earnings in seconds (adjust as needed)
     private $timezone = 'Asia/Dhaka'; //you can find from your time zone here - https://en.wikipedia.org/wiki/Time_zone
 
+    public function getDailyLimit()
+    {
+        return $this->dailyLimit;
+    }
+
     public function __construct()
     {
         $this->middleware('auth');
