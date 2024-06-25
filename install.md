@@ -11,7 +11,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 3. Clone the repository by running the following command:
 
    ```shell
-   git clone https://github.com/ismamilahi/coin-earning-ctrlpanel.git
+   git clone https://github.com/aroniktv/coin-earning-ctrlpanel.git
 
    ```
 
