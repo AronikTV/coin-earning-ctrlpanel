@@ -94,3 +94,9 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 4. Save the File.
 
 5. Upload the other files to the Live CtrlPanel Folder
+
+6. Run this command's in the ctrlpanel directory.
+```
+cd /var/www/controlpanel && php artisan view:clear && php artisan config:clear && chown -R www-data:www-data /var/www/controlpanel/*
+```
+
