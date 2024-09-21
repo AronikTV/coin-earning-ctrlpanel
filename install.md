@@ -76,7 +76,7 @@ Before deploying the CtrlPanel.GG Coin Earning System to your production server,
 
    ```
 
-3. Add this to the Bottom of the File under the Home Route:
+3. Add this under the Line ```shellRoute::post('/voucher/redeem', [VoucherController::class, 'redeem'])->middleware('throttle:5,1')->name('voucher.redeem');```
 
    ```shell
    Route::get('/earn', [EarnController::class, 'index'])->name('earn.index');
